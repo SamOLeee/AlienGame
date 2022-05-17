@@ -7,6 +7,7 @@ from game_stats import GameStats
 from button import Button
 from scoreboard import Scoreboard
 
+
 def run_game():
     #初始化pygame、设置和屏幕对象
     pygame.init()
@@ -15,6 +16,7 @@ def run_game():
     pygame.display.set_caption("外星人入侵")
     #创建Play按钮
     play_botton = Button(ai_settings, screen, "Play")
+
     #创造一艘飞船
     ship = Ship(ai_settings,screen)
     #创建一个用于存储子弹的编组
@@ -34,6 +36,7 @@ def run_game():
             ship.update()
             gf.update_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets)
             gf.update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets)
+            gf.fire_bullet(ai_settings, screen, ship, bullets)
 
         gf.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_botton)
 # run_game()
