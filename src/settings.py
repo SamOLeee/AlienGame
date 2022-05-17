@@ -6,9 +6,9 @@ class Settings():
         #屏幕设置
         self.screen_width = 1300
         self.screen_height = 700
-        self.bg_color = (230,230,230)
+        self.bg_color = (69,112,157)
         #飞船的设置
-        self.ship_limit = 3
+        self.ship_limit = 0
 
         #子弹设置
         self.bullets_allowed = 10
